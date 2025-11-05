@@ -9,13 +9,13 @@ const shopData = {
   shops: [
     {
       name: "New Cross",
-      manager: "Sam Patel",
+      manager: "Armandas Mitkus",
       address: "123 High Street, London SE14"
     },
     {
       name: "Deptford",
-      manager: "Mia Khan",
-      address: "42 Creek Road, London SE8"
+      manager: "John Pork",
+      address: "42 highstreet, London SE8"
     }
   ]
 };
