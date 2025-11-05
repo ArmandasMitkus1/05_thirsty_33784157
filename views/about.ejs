@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= shopName %> — About</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <h1>About <%= shopName %> Shop</h1>
+    <p>We sell all sorts of drinks.</p>
+
+    <h2>Our shop locations</h2>
+    <ul>
+      <% for (const s of shops) { %>
+        <li>
+          <strong><%= s.name %></strong> — Manager: <%= s.manager %><br>
+          <small><%= s.address %></small>
+        </li>
+      <% } %>
+    </ul>
+
+    <p><a href="/">Back home</a></p>
+  </body>
+</html>
