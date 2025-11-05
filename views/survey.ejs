@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= shopName %> — Survey</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <h1>Customer Survey</h1>
+
+    <form method="POST" action="/survey_submit">
+      <fieldset>
+        <legend>Your details</legend>
+
+        <label>
+          First name:
+          <input type="text" name="first" required>
+        </label>
+
+        <label>
+          Surname:
+          <input type="text" name="last" required>
+        </label>
+
+        <label>
+          Email:
+          <input type="email" name="email" required>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Questions</legend>
+
+        <label>
+          How old are you?
+          <input type="number" name="age" min="0" max="120" required>
+        </label>
+
+        <div>
+          <p>Which of the following drinks categories do you consume?</p>
+          <% for (const c of productCategories) { %>
+            <label style="display:block">
+              <input type="radio" name="category" value="<%= c %>" required>
+              <%= c %>
+            </label>
+          <% } %>
+        </div>
+
+        <label style="display:block; margin-top:8px;">
+          <input type="checkbox" name="isStudent" value="true">
+          I am a student
+        </label>
+      </fieldset>
+
+      <button type="submit">Submit survey</button>
+    </form>
+
+    <p><a href="/">Back home</a></p>
+  </body>
+</html>
